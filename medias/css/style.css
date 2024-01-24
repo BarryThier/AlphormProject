@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    background-color: #f3f3f3;
+    font-size: 20px;
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+}
+/* Tout ce qui concerne la barre de navigation */
+nav {
+    background-color: #dbdbdb;
+    padding: 30px; 
+    text-align: right;
+}
+/* Tout ce qui concerne les items */
+.menu {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Tout ce qui concerne le menu */
+.menu li {
+    display: inline;
+    margin-left: 15px;
+}
+/* Tout ce qui concerne les liens */
+.menu li a {
+    text-decoration: none;
+    color: #039;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+/* La pseudo class hover sur les liens */
+.menu li a:hover {
+    color: #09f;
+    transition: 0.5s;
+}
+section {
+    margin-bottom: 30px;
+}
+.resume,article {
+    background-color: #fff;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 30px;
+    height: 250px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 10px #ddd;
+}
+footer {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+.voir-menu,.cacher-menu,#check {
+    display: none;
+}
+/* Ce qui concerne l'image */
+section img {
+    width: 100%;
+}
+.resume h2 {
+    color: #090;
+    text-align: center;
+}
+/* Ceci est le titre de niveau 1 de la page du château de versailles */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: #090;
+}
+article img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    float: left;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    margin-right: 25px;
+}
+article {
+    height: auto;
+}
+article h2 {
+    text-align: center;
+}
+.resume p,article p {
+    text-indent: 30px;
+    text-align: justify;
+}
+.resume p:last-child {
+    display: inline;
+    background-color: orange;
+    padding: 5px 25px;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.8s;
+}
+a:hover {
+    color: #fff;
+    transition: 0.8s;
+}
+/* Ce qui concerne les images sur la page index.html */
+.ronde {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    float: left;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    margin-right: 25px;
+}
+.rond-versailles {
+    background-image: url(../images/chateau-versailles.jpg);
+}
+.rond-chambord {
+    background-image: url(../images/chateau-chambord\ \(2\).jpg);
+}
+.menu li .on {
+    color: #f00;
+}
+/* Création du menu burger */
+@media screen and (max-width: 950px) {
+    .voir-menu,.cacher-menu {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .menu {
+        position: fixed;
+        top: 0%;
+        right: -100%;
+        height: 100vh;
+        background-color: #dbdbdb;
+        width: 100%;
+        transition: 0.8s;
+        padding-top: 100px;
+    }
+    #check:checked ~ .menu {
+        right: 0%;
+    } 
+    .menu li {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+        border-bottom: 1px solid #000;
+    } 
+    .cacher-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    .ronde {
+        width: 100%;
+        float: none;
+        margin-right: 0px;
+        border-radius: 50px;
+        max-width: 450px;
+        margin: auto;
+    }
+    .resume,article {
+        height: auto;
+        text-align: center;
+    }
+    article img {
+        width: 100%;
+        float: none;
+        margin-right: 0px;
+        border-radius: 50px;
+        max-width: 450px;
+        margin: auto;
+    }
+}
